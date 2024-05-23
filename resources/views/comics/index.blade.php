@@ -13,10 +13,14 @@
                   <div class="card text-bg-primary">
                     <img src="https://picsum.photos/200" class="card-img-top">
                     <div class="card-body">
-                      <h5 class="card-title">{{ $comic -> title }}</h5>
-                      <p class="card-text">{{ $comic -> description }}</p>
+                      <h3 class="card-title">{{ $comic -> title }}</h3>
+                      <h5 class="card-title">{{ $comic -> series }}</h5>
+                      <h6 class="card-title">{{ $comic -> type }}</h6>
+                      <h6 class="card-title">{{ $comic -> price }}</h6>
                     </div>
-                    <a href="#" class="btn btn-light">Vedi comic</a>
+                    <div class="d-flex justify-content-center p-2">
+                        <a href="{{ $comic -> id }}" class="btn btn-light">Vedi comic</a>
+                    </div>
                   </div>
                 </div>
                 @endforeach
