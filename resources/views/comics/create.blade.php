@@ -16,6 +16,11 @@
                     <label for="description" class="form-label">Descrizione</label>
                     <textarea class="form-control" id="description" rows="5" name="description"></textarea>
                 </div>
+
+                <div class="m-2">
+                    <label for="thumb" class="form-label">Copertina</label>
+                    <input type="text" class="form-control" id="thumb" name="thumb">
+                </div>
                 
                 <div class="m-2">
                     <label for="price" class="form-label">Prezzo</label>
@@ -36,8 +41,8 @@
                     <label for="type" class="form-label">Tipo</label>
                     <select class="form-select" id="type" name="type">
                         <option selected>Scegli un'opzione</option>
-                        <option value="lunga">comic book</option>
-                        <option value="corta">graphic novel</option>
+                        <option value="comic book">comic book</option>
+                        <option value="graphic novel">graphic novel</option>
                       </select>
                 </div>
                 <div class="p-2">
