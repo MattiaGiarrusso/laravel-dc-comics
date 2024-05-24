@@ -7,6 +7,13 @@ use Illuminate\Http\Request;
 class PageController extends Controller
 {
     public function index() {
-        return view('home');
+
+        $footers = config('footerLinks');
+
+        $data = [
+            'footers'=> $footers
+        ];
+
+        return view('home', $data);
     }
 }

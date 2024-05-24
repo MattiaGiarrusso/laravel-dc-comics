@@ -1,0 +1,88 @@
+@use './variables' as *;
+
+#footer-link {
+    height: 350px;
+    background-image: url('/resources/img/footer-bg.jpg');
+    background-size: cover;
+    color: antiquewhite;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 150px;
+    
+    .img-container {
+      width: 50%;     
+      background-image: url('/resources/img/dc-logo-bg.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+    
+    .nav-links {
+      width: 35%;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      padding-top: 40px;
+      gap: 20px;
+
+      ul {
+        padding-left: 0px;
+        padding-right: 0px;
+        margin: 0px;
+      }
+
+      a {
+        font-size: 10px;
+        font-weight: 500;
+        color: lightgray;
+    
+            &:hover {
+                color: $color-secondary;
+            }
+       }
+
+    } 
+
+  }
+
+  #footer-bottom {
+    height: 80px;
+      font-family: inherit;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: $color-primary;
+
+        .footer-right {
+            color: $color-secondary;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+
+            .social-icon {
+              display: flex;
+              align-items: center;
+              cursor: pointer;
+              
+              img {
+                height: 25px;
+              }
+            }
+
+        }
+
+        button {
+            background-color: transparent;
+            border: 2px solid $color-secondary;
+            padding: 8px 12px;
+            color: white;
+            font-weight: 700;
+            font-family: inherit;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $color-secondary;
+                transition: 0.2s; 
+            }
+        }
+  }

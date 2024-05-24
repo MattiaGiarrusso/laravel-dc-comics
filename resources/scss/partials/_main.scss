@@ -1,0 +1,101 @@
+@use './variables' as *;
+
+section {
+
+    .hero {
+      height: 300px;
+
+      .jumbo-container {
+        height: 100%;
+        background-image: url('/resources/img/jumbotron.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+    }
+
+    .series {
+      background-color: $color-tertiary;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 30px 150px;
+
+      .title-series {
+        width: calc(100%/7);
+        color: white;
+        font-family: inherit;
+        text-align: center;
+        background-color: $color-secondary;
+        padding: 5px;
+        position: absolute;
+        top: -2.5%;
+        left: 10%;
+      }
+
+      .comics-current {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        
+        .comics-card {
+            width: calc(100% / 6);
+            display: flex;
+            flex-direction: column;
+            padding: 10px 10px;
+            
+            &:hover {
+              opacity: 0.6;
+            }
+            
+            a {
+              color: white;
+              font-weight: 400;
+            }
+        
+            .comic-container {
+              margin-bottom: 10px;
+        
+            } 
+              
+                
+            img {
+                width: 100%;
+                height: 200px;
+            }
+        
+        
+            figcaption {
+                align-self: flex-start;
+            }
+        
+        }
+
+
+      }
+
+    }
+
+      .load-button {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+
+        button {
+          background-color: $color-secondary;
+          border: none;
+          padding: 10px 20px;
+          color: white;
+          font-weight: 600;
+          font-family: inherit;
+
+          &:hover {
+            transition: 0.4s;
+            background-color: white;
+            color: $color-secondary;
+          }
+        }
+      }
+
+    }

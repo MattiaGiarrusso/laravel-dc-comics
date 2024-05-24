@@ -15,9 +15,12 @@ class ComicController extends Controller
     public function index()
     {
         $comics = Comic::all();
+        $footers = config('footerLinks');
 
+        
         $data = [
-            'comics'=> $comics
+            'comics'=> $comics,
+            'footers'=> $footers
         ];
 
         return view('comics.index', $data);
@@ -30,7 +33,13 @@ class ComicController extends Controller
      */
     public function create()
     {
-        return view('comics.create');
+        $footers = config('footerLinks');
+
+        $data = [
+            'footers'=> $footers            
+        ];
+
+        return view('comics.create', $data);
     }
 
     /**
@@ -65,10 +74,11 @@ class ComicController extends Controller
     public function show($id)
     {
         $comic = Comic::find($id);
+        $footers = config('footerLinks');
 
         $data = [
-            
-            'comic' => $comic
+            'comic' => $comic,
+            'footers'=> $footers
         ];
 
         return view('comics.show', $data);

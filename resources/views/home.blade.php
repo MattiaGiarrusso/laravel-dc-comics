@@ -1,5 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-        <section class="container">Sono la homepage</section>
+        <section>
+                <div class="hero">
+                        <div class="jumbo-container">
+                        </div>
+                </div>
+        </section>
 @endsection

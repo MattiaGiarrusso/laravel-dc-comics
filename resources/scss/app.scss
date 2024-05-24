@@ -1,1 +1,74 @@
+@use './partials/variables' as * ;
+@use './partials/header';
+@use './partials/main';
+@use './partials/footer';
+
 @import '~bootstrap/scss/bootstrap';
+
+
+// -------- RESET --------- //
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    body {
+        font-family: "Oswald", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+    }
+    
+}
+
+// -------- GENERAL --------- //
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button {
+    cursor: pointer;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+}
+
+// -------- LAYOUT --------- //
+.ms-container {
+    padding: 20px 150px;
+}
+
+// -------- UTILITY --------- //
+.ms-pdg-right-10 {
+    padding-right: 10px;
+}
+
+.ms-pdg-bottom-16 {
+    padding-bottom: 16px;
+}
+
+.ms-gap-10 {
+    gap: 10px;
+}
+
+.ms-gap-20 {
+    gap: 20px;
+}
+
+.ms-gap-30 {
+    gap: 30px;
+}
+
+.ms-gap-40 {
+    gap: 40px;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
