@@ -53,13 +53,14 @@ class ComicController extends Controller
         $formComic = $request->all();
         
         $newComic = new Comic();
-        $newComic->title = $formComic['title'];
-        $newComic->description = $formComic['description'];
-        $newComic->thumb = $formComic['thumb'];
-        $newComic->price = $formComic['price'];
-        $newComic->series = $formComic['series'];
-        $newComic->sale_date = $formComic['sale_date'];
-        $newComic->type = $formComic['type'];
+        // $newComic->title = $formComic['title'];
+        // $newComic->description = $formComic['description'];
+        // $newComic->thumb = $formComic['thumb'];
+        // $newComic->price = $formComic['price'];
+        // $newComic->series = $formComic['series'];
+        // $newComic->sale_date = $formComic['sale_date'];
+        // $newComic->type = $formComic['type'];
+        $newComic-> fill($formComic);
         $newComic->save();
 
         return redirect()->route('comics.show', ['comic' => $newComic->id]);
@@ -73,7 +74,7 @@ class ComicController extends Controller
      */
     public function show($id)
     {
-        $comic = Comic::find($id);
+        $comic = Comic::findOrFail($id);
         $footers = config('footerLinks');
 
         $data = [
@@ -93,7 +94,15 @@ class ComicController extends Controller
      */
     public function edit($id)
     {
-        //
+        $comic = Comic::findOrFail($id);
+        $footers = config('footerLinks');
+
+        $data = [
+            'comic' => $comic,
+            'footers'=> $footers
+        ];
+
+        return view('comics.edit', $data);
     }
 
     /**
@@ -105,7 +114,16 @@ class ComicController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $comic = Comic::findOrFail($id);
+        $formComic = $request->all();
+
+        // $comic->title = $formComic['title'];
+        // $comic->description = $formComic['description'];
+        // $comic->thumb = $formComic['thumb'];
+
+        $comic->update($formComic);
+
+        return redirect()-> route('comics.show', ['comic'=> $comic-> id]);
     }
 
     /**

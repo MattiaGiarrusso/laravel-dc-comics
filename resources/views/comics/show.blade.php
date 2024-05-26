@@ -6,6 +6,8 @@
         <div class="container">
             <h1>{{ $comic -> title }}</h1>
 
+            <a href="{{ route('comics.edit', ['comic'=> $comic->id])}}" class="btn btn-dark">Modifica fumetto</a>
+
             <div class="text-bg-primary">
 
                     <img src="https://picsum.photos/200" class="card-img-top">
@@ -18,6 +20,7 @@
                     </div>
 
             </div>
+
         </div>
     </section>
     
