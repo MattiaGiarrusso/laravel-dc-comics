@@ -6,7 +6,21 @@
         <div class="container">
             <h1>{{ $comic -> title }}</h1>
 
-            <a href="{{ route('comics.edit', ['comic'=> $comic->id])}}" class="btn btn-dark">Modifica fumetto</a>
+            <div class="container d-flex align-items-center">
+                <div>
+                    <a href="{{ route('comics.edit', ['comic'=> $comic->id])}}" class="btn btn-dark">Modifica fumetto</a>
+                </div>
+                <div>
+                    <form action="{{ route('comics.destroy', ['comic'=> $comic->id])}}" method="POST">
+                        @csrf
+                        @method('DELETE')
+
+                        <button class="btn btn-danger" type="submit">Elimina fumetto</button>
+                        
+                    </form>
+                </div>
+            </div>
+
 
             <div class="text-bg-primary">
 
