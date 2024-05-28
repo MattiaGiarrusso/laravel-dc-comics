@@ -10,8 +10,10 @@
 
         <div class="series">
 
-            <div class="title-series">
-                <h3>COMICS CURRENT</h3>
+            <div class="title-series d-flex align-items-center justify-content-center">
+                <div>
+                    <h3 class="p-0 m-0 fs-4">COMICS CURRENT</h3>
+                </div>
             </div>
 
             <div class="comics-current">
